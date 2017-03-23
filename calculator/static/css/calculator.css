@@ -1,0 +1,38 @@
+/* for block of the result of calculation */
+.result {
+    background-color: #edeedf;
+    width: 180px;
+    font-size: 30px;
+    text-align: right;
+    border: 2px black solid;
+    padding: 5px;    
+}
+
+/* table of buttons */
+table {
+    width: 200px;
+    height: 200px;
+    
+}
+
+/* buttons, including numbers and operations*/
+button{
+    background-color: #edeedf;
+    border-color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding : 5px 10px;
+    margin: 2px;
+    text-align: center;
+
+}
+
+/* specific style for buttons of operations*/
+button.operation {
+    background-color: #faeadc;
+}
+
+/* change the color of buttons when the users hover over it */
+button:hover {
+    background-color: gray;
+}

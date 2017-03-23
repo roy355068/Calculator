@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+                <link rel="stylesheet" type="text/css" href="../static/css/calculator.css">
+
+        <title>Calculator</title>
+    </head>
+    <body>
+        <!-- Display field of result of calculation -->
+        <div class="result">
+            {{display}}
+        </div>
+
+        <!-- table of buttons (numbers and operations)-->
+        <form method="POST">
+
+            <!-- Hidden fields for maintaining states-->
+            <input type="hidden" name="preVal" value={{preVal}}>
+            <input type="hidden" name="newVal" value={{newVal}}>
+            <input type="hidden" name="preOps" value={{preOps}}>
+
+            <table>
+                <tr>
+                    <td><button type="submit" class="num" value="7" name="7">7</button></td>
+                    <td><button type="submit" class="num" value="8" name="8">8</button></td>
+                    <td><button type="submit" class="num" value="9" name="9">9</button></td>
+                    <td><button type="submit" class="operation" value="+" name="+"> &plus;</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" class="num" value="4" name="4">4</button></td>
+                    <td><button type="submit" class="num" value="5" name="5">5</button></td>
+                    <td><button type="submit" class="num" value="6" name="6">6</button></td>
+                    <td><button type="submit" class="operation" value="-" name="-"> &minus;</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" class="num" value="1" name="1">1</button></td>
+                    <td><button type="submit" class="num" value="2" name="2">2</button></td>
+                    <td><button type="submit" class="num" value="3" name="3">3</button></td>
+                    <td><button type="submit" class="operation" value="*" name="*"> &times;</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="num" value="0" name="0">0</button></td>
+                    <td><button type="submit" class="operation" value="=" name="="> &equals;</button></td>
+                    <td><button type="submit" class="operation" value="/" name="/"> &divide;</button></td>
+                </tr>
+            </table>
+        {% csrf_token %}
+        </form>
+    </body>
+</html>
